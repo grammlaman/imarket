@@ -3,7 +3,8 @@
 @import "vars"
 $font_body: 14px
 
-//+font_inc($f_reg,'Montserrat-Light.ttf')
++font_inc($f_reg,'OpenSans-Regular.ttf')
++font_inc($f_semi,'OpenSans-Semibold.ttf')
 .set
 	+wh(100%)
 	overflow: hidden
@@ -12,7 +13,7 @@ html,body
 	overflow-x: hidden
 body
 	+wh(100%)
-	//+font($font_body,$f_reg,$gray)
+	+font($font_body,$f_reg,#000)
 	//+bg(100%,url(../img/bb.png),left bottom,no-repeat)
 $unit: 'px'
 @import "media/m"

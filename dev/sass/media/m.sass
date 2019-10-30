@@ -2,8 +2,44 @@ $unit : 'px'
 .section
   +w($mobile#{$unit})
   margin: 0 auto
-
-  .head
-    &-red-line
-      +wh(100%,4px)
-      background-color: $red
+.red
+  color: $red
+.head
+  &-red-line
+    +wh(100%,4px)
+    background-color: $red
+  &-top
+    &-bgc
+      display: none
+  &-mob
+    &-but
+      span
+        +wh(24px,4px)
+        display: block
+        background-color: $red
+        margin-bottom: 6px
+        &:last-child
+          margin-bottom: 0
+    &-but-close
+      display: none
+    &-checkbox,&-menu
+      display: none
+    &-checkbox
+      &:checked~.head-mob-menu
+        display: block
+      &:checked~.head-mob-but-close
+        display: block
+      &:checked~.head-mob-but
+        display: none
+    &-ps
+      display: flex
+      align-items: center
+    &-phone
+      a
+        display: flex
+        align-items: center
+      span
+        +font(18px,$f_semi,#000)
+        margin-left: 10px
+  &-address
+    display: none

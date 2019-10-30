@@ -3,14 +3,14 @@ header
     .row.head-top-bgc
         .section
             nav.head-top-nav
-                ul
+                ul.head-top-links-main
                     li
                         a(href='#').head-top-link О компании
                     li
                         a(href='#').head-top-link Новости
                     li
                         a(href='#').head-top-link Как купить
-                        ul
+                        ul.head-top-links-slave
                             li
                                 a(href='#') Как оформить заказ
                             li
@@ -23,16 +23,73 @@ header
                         a(href='#').head-top-link Розничные магазины
                     li
                         a(href='#').head-top-link Контакты
-            a(href='tel:88003755555').head-phone
-                +img()
-                span 8 800 375 55 55
-            a(href='#').head-add-call
-        .login
-            a(href='#') Вход
-            div
-            a(href='#') Регистрация
+            .head-phone
+                a(href='tel:88003755555').head-phone-call
+                    +img()
+                    span 8 800 375 55 55
+                a(href='#').head-phone-add-call Заказать звонок
+            .login
+                a(href='#') Вход
+                div
+                a(href='#') Регистрация
     .row
         .section
+            nav.head-mob-nav
+                input(type='checkbox' id='head-top-nav' class='head-mob-checkbox')
+                label(for='head-top-nav').head-mob-but
+                    span
+                    span
+                    span
+                label(for='head-top-nav').head-mob-but-close
+                    +img('head-close.png')
+                .head-mob-menu
+                    .head-mob-ps
+                        .head-mob-phone
+                            a(href='tel:88003755555')
+                                +img('head-tel.png')
+                                span 8 800 375 55 55
+                        .head-mob-search
+
+                    .head-mob-links
+                        input(type='checkbox' id='head-top-mob' class='head-mob-checkbox-mob')
+                        label(for='head-top-mob') Ювелирные украшения
+                        ul.head-mob-links-ul
+                            li
+                                a(href='#') Для женщин
+                            li
+                                a(href='#') Для мужчин
+                            li
+                                a(href='#') Наручные часы
+                            li
+                                a(href='#') Коллекции
+                            li
+                                a(href='#') Столовое серебро
+                            li
+                                a(href='#') Сувениры
+                            li
+                                a(href='#') SALE
+                            li
+                                a(href='#').red Акции
+                    ul.head-mob-links-main
+                        li
+                            a(href='#') О компании
+                        li
+                            a(href='#') Новости
+                        li
+                            a(href='#') Как купить
+                            ul.head-mob-links-slave
+                                li
+                                    a(href='#') Как оформить заказ
+                                li
+                                    a(href='#') Доставка и оплата
+                                li
+                                    a(href='#') Гарантия, обмен, возврат
+                                li
+                                    a(href='#') Программа лояльности
+                        li
+                            a(href='#') Розничные магазины
+                        li
+                            a(href='#') Контакты
             .head-address
                 a(href='#')
                     +img()
@@ -42,7 +99,7 @@ header
                         span Москва
             .head-logo
                 a(href='#')
-                    +img()
+                    +img('logo.png')
             .head-choosen
                 a(href='#')
                     +img()
