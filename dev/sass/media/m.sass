@@ -12,34 +12,96 @@ $unit : 'px'
     &-bgc
       display: none
   &-mob
+    &-row
+      display: flex
+      align-items: center
+      position: fixed
+      box-shadow: 0 3px 3px rgba(0,0,0,0.2)
     &-but
+      display: block
+      padding: 17px 24px 17px 18px
       span
         +wh(24px,4px)
         display: block
         background-color: $red
-        margin-bottom: 6px
-        &:last-child
-          margin-bottom: 0
+        &:nth-child(2)
+          margin: 6px 0
     &-but-close
       display: none
-    &-checkbox,&-menu
+      position: absolute
+      z-index: 10
+      top: 0
+      right: 0
+      padding: 15px 19px 16px
+      background-color: #fff
+    &-menu
+      position: absolute
+      top: -4px
+      z-index: 10
+      background-color: $light-pink
       display: none
     &-checkbox
-      &:checked~.head-mob-menu
+      &:checked~.head-mob-menu,&:checked~.head-mob-but-close
         display: block
-      &:checked~.head-mob-but-close
-        display: block
-      &:checked~.head-mob-but
-        display: none
     &-ps
       display: flex
       align-items: center
+      border-bottom: 1px solid $light-gray
     &-phone
       a
+        padding: 19px
         display: flex
         align-items: center
+        span
+          +font(18px,$f_semi,#000)
+          margin-left: 10px
+    &-search
+      label
+        padding: 24px 24px 20px 21px
+        display: block
+        border-left: 1px solid $light-gray
+      &-window
+        +wh(198px,62px)
+        background-color: $light-pink
+        position: absolute
+        left: 0
+        top: 0
+        display: none
+        justify-content: center
+        align-items: center
+        input
+          +font(13px,$f_reg,#000)
+          width: 170px
+          border: none
+          background-color: $light-pink
+          text-align: right
+      &-input:checked~.head-mob-search-window
+        display: flex
+    &-cont
+      +wh(20px)
+      border-radius: 10px
+      border: 2px solid #fff
+      background-color: $red
+      position: absolute
+      bottom: 0px
+      right: 0px
+      display: flex
+      align-items: center
+      justify-content: center
       span
-        +font(18px,$f_semi,#000)
-        margin-left: 10px
+        +font(12px,$f_reg,#fff)
+    &-cart
+      bottom: -1px
+      right: -5px
+    &-cc
+      position: relative
   &-address
+    display: none
+  &-logo
+    width: 136px
+  &-choosen
+    margin-left: 25px
+  &-cart
+    margin-left: 12px
+  &-cont
     display: none

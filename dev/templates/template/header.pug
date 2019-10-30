@@ -29,18 +29,18 @@ header
                     span 8 800 375 55 55
                 a(href='#').head-phone-add-call Заказать звонок
             .login
-                a(href='#') Вход
+                button Вход
                 div
-                a(href='#') Регистрация
+                button Регистрация
     .row
-        .section
+        .section.head-mob-row
             nav.head-mob-nav
-                input(type='checkbox' id='head-top-nav' class='head-mob-checkbox')
-                label(for='head-top-nav').head-mob-but
+                input(type='checkbox' id='head-mob-nav' class='head-mob-checkbox' style='display:none')
+                label(for='head-mob-nav').head-mob-but
                     span
                     span
                     span
-                label(for='head-top-nav').head-mob-but-close
+                label(for='head-mob-nav').head-mob-but-close
                     +img('head-close.png')
                 .head-mob-menu
                     .head-mob-ps
@@ -49,9 +49,18 @@ header
                                 +img('head-tel.png')
                                 span 8 800 375 55 55
                         .head-mob-search
-
+                            input(type='checkbox' id='head-mob-search' class='head-mob-search-input' style='display:none')
+                            label(for='head-mob-search')
+                                +img('search.png')
+                            .head-mob-search-window
+                                input(type='text' placeholder='Введите название товара')
+                    .head-mob-user
+                        button.head-mob-login
+                            span Вход
+                        button.head-mob-reg
+                            span Регистрация
                     .head-mob-links
-                        input(type='checkbox' id='head-top-mob' class='head-mob-checkbox-mob')
+                        input(type='checkbox' id='head-top-mob' class='head-mob-checkbox-nav' style='display:none')
                         label(for='head-top-mob') Ювелирные украшения
                         ul.head-mob-links-ul
                             li
@@ -100,17 +109,21 @@ header
             .head-logo
                 a(href='#')
                     +img('logo.png')
-            .head-choosen
+            .head-choosen.head-mob-cc
                 a(href='#')
-                    +img()
-                    span.head-span-cont
+                    +img('choosen.png')
+                    .head-mob-cont.head-mob-choosen
+                        span 7
+                    span.head-choosen-cont.head-cont
                         span Избранное
                         br
                         span Товаров (#[span.head-choosen-products 0])
-            .head-cart
+            .head-cart.head-mob-cc
                 a(href='#')
-                    +img()
-                    span.head-span-cont
+                    +img('cart.png')
+                    .head-mob-cont.head-mob-cart
+                        span 3
+                    span.head-cart-cont.head-cont
                         span Моя корзина
                         br
                         span Ваша корзина пуста
