@@ -55,9 +55,11 @@ header
                             .head-mob-search-window
                                 input(type='text' placeholder='Введите название товара')
                     .head-mob-user
-                        button.head-mob-login
+                        input(type='checkbox' id='head-mob-login' class='head-mob-login-input' style='display:none')
+                        input(type='checkbox' id='head-mob-reg' class='head-mob-reg-input' style='display:none')
+                        label(for='head-mob-login').head-mob-login
                             span Вход
-                        button.head-mob-reg
+                        label(for='head-mob-reg').head-mob-reg
                             span Регистрация
                     .head-mob-links
                         input(type='checkbox' id='head-top-mob' class='head-mob-checkbox-nav' style='display:none')

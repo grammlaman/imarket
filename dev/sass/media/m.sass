@@ -95,6 +95,20 @@ $unit : 'px'
       right: -5px
     &-cc
       position: relative
+    &-user
+      display: flex
+      label
+        background-color: $red
+        display: flex
+        align-items: center
+        justify-content: center
+        span
+          +font(18px,$f_reg,#fff)
+    &-login
+      +wh(90px,62px)
+      border-right: 1px solid $light-gray
+    &-reg
+      +wh(170px,62px)
   &-address
     display: none
   &-logo
