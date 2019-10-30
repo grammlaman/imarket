@@ -1,0 +1,9 @@
+$unit : 'px'
+.section
+  +w($mobile#{$unit})
+  margin: 0 auto
+
+  .head
+    &-red-line
+      +wh(100%,4px)
+      background-color: $red

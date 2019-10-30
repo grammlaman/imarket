@@ -1,0 +1,59 @@
+header
+    .row.head-red-line
+    .row.head-top-bgc
+        .section
+            nav.head-top-nav
+                ul
+                    li
+                        a(href='#').head-top-link О компании
+                    li
+                        a(href='#').head-top-link Новости
+                    li
+                        a(href='#').head-top-link Как купить
+                        ul
+                            li
+                                a(href='#') Как оформить заказ
+                            li
+                                a(href='#') Доставка и оплата
+                            li
+                                a(href='#') Гарантия, обмен, возврат
+                            li
+                                a(href='#') Программа лояльности
+                    li
+                        a(href='#').head-top-link Розничные магазины
+                    li
+                        a(href='#').head-top-link Контакты
+            a(href='tel:88003755555').head-phone
+                +img()
+                span 8 800 375 55 55
+            a(href='#').head-add-call
+        .login
+            a(href='#') Вход
+            div
+            a(href='#') Регистрация
+    .row
+        .section
+            .head-address
+                a(href='#')
+                    +img()
+                    span.head-span-cont
+                        span Магазины
+                        br
+                        span Москва
+            .head-logo
+                a(href='#')
+                    +img()
+            .head-choosen
+                a(href='#')
+                    +img()
+                    span.head-span-cont
+                        span Избранное
+                        br
+                        span Товаров (#[span.head-choosen-products 0])
+            .head-cart
+                a(href='#')
+                    +img()
+                    span.head-span-cont
+                        span Моя корзина
+                        br
+                        span Ваша корзина пуста
