@@ -1,3 +1,28 @@
 $unit: 'px'
 .section
   +w($desktop#{$unit})
+.head
+  &-top
+    padding: 10px 15px
+    &-nav
+      a:hover,label:hover
+        text-decoration: underline
+  &-phone
+    flex-direction: row
+    &-add-call
+      margin-left: 10px
+      &:hover
+        text-decoration: underline
+  &-login
+    button:hover
+      text-decoration: underline
+  &-mob-row
+    padding: 5px 0
+  &-address
+    margin-right: 340px
+  &-logo
+    +w(306px)
+  &-address,&-cart,&-choosen
+    a:hover
+      span span:first-child
+        text-decoration: underline

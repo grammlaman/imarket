@@ -8,19 +8,19 @@
     height: 8px
   &-top
     +w(100%)
-    background-color: $middle-pink
     padding: 3px 15px
     display: flex
     align-items: center
     &-bgc
       display: block
+      background-color: $middle-pink
     &-nav
-      +w(264px)
       display: flex
-      justify-content: space-between
+      align-items: center
       margin-right: auto
       a,label
         +font(13px,$f_reg,#000)
+        margin-right: 20px
       &>a:nth-child(6),&>a:last-child
         display: none
       label
@@ -55,6 +55,8 @@
       display: flex
       justify-content: center
       align-items: center
+      img
+        max-width: 14px
       span
         +font(18px,$f_reg,#000)
         margin-left: 10px
@@ -65,7 +67,7 @@
     align-items: center
     div
       +wh(2px,15px)
-      margin: 0 10px
+      margin: 0 7px
       background-color: $middle-gray
     button
       +font(13px,$f_reg,#000)
@@ -105,7 +107,7 @@
         left: 220px
   &-cont
     display: block
-  &-choosen,&-cart
+  &-choosen,&-cart,&-address
     margin: 0
     a
       display: flex
@@ -121,7 +123,6 @@
   &-row-second
     display: flex
     align-items: center
-    padding: 0 0 0 33px
     position: relative
     border-bottom: 1px solid #d8d8d8
     margin: 0 15px
