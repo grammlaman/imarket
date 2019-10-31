@@ -33,99 +33,186 @@ header
                 div
                 button Регистрация
     .row
-        .section.head-mob-row
-            nav.head-mob-nav
-                input(type='checkbox' id='head-mob-nav' class='head-mob-checkbox' style='display:none')
-                label(for='head-mob-nav').head-mob-but
-                    span
-                    span
-                    span
-                label(for='head-mob-nav').head-mob-but-close
-                    +img('head-close.png')
-                .head-mob-menu
-                    .head-mob-ps
-                        .head-mob-phone
-                            a(href='tel:88003755555')
-                                +img('head-tel.png')
-                                span 8 800 375 55 55
-                        .head-mob-search
-                            input(type='checkbox' id='head-mob-search' class='head-mob-search-input' style='display:none')
-                            label(for='head-mob-search')
-                                +img('search.png')
-                            .head-mob-search-window
-                                input(type='text' placeholder='Введите название товара')
-                    .head-mob-user
-                        input(type='checkbox' id='head-mob-login' class='head-mob-login-input' style='display:none')
-                        input(type='checkbox' id='head-mob-reg' class='head-mob-reg-input' style='display:none')
-                        label(for='head-mob-login').head-mob-login
-                            span Вход
-                        label(for='head-mob-reg').head-mob-reg
-                            span Регистрация
-                    .head-mob-links
-                        input(type='checkbox' id='head-top-mob' class='head-mob-checkbox-nav' style='display:none')
-                        label(for='head-top-mob') Ювелирные украшения
-                        ul.head-mob-links-ul
-                            li
-                                a(href='#') Для женщин
-                            li
-                                a(href='#') Для мужчин
-                            li
-                                a(href='#') Наручные часы
-                            li
-                                a(href='#') Коллекции
-                            li
-                                a(href='#') Столовое серебро
-                            li
-                                a(href='#') Сувениры
-                            li
-                                a(href='#') SALE
-                            li
-                                a(href='#').red Акции
-                    ul.head-mob-links-main
-                        li
-                            a(href='#') О компании
-                        li
-                            a(href='#') Новости
-                        li
-                            a(href='#') Как купить
-                            ul.head-mob-links-slave
+        .section
+            .head-mob-row
+                nav.head-mob-nav
+                    input(type='checkbox' id='head-mob-nav' class='head-mob-checkbox' style='display:none')
+                    label(for='head-mob-nav').head-mob-but
+                        span
+                        span
+                        span
+                    label(for='head-mob-nav').head-mob-but-close
+                        +img('head-close.png')
+                    .head-mob-menu
+                        .head-mob-ps
+                            .head-mob-phone
+                                a(href='tel:88003755555')
+                                    +img('head-tel.png')
+                                    span 8 800 375 55 55
+                            .head-mob-search
+                                input(type='checkbox' id='head-mob-search' class='head-mob-search-input' style='display:none')
+                                label(for='head-mob-search')
+                                    +img('search.png')
+                                .head-mob-search-window
+                                    input(type='text' placeholder='Введите название товара')
+                        .head-mob-user
+                            input(type='checkbox' id='head-mob-login' class='head-mob-login-input' style='display:none')
+                            input(type='checkbox' id='head-mob-reg' class='head-mob-reg-input' style='display:none')
+                            label(for='head-mob-login').head-mob-login-button
+                                span Вход
+                            .head-mob-login-div
+                            label(for='head-mob-reg').head-mob-reg-button
+                                span Регистрация
+                            form.head-mob-login-form
+                                input(type='text' placeholder='Логин:').head-mob-login-first
+                                input(type='text' placeholder='Пароль:').head-mob-login-second
+                                button.head-mob-login-third
+                                    span Войти
+                                .head-mob-login-forth
+                                    div
+                                        input(type='checkbox' id='head-mob-login-checkbox')
+                                        label(for='head-mob-login-checkbox')
+                                            span Запомнить
+                                    button.red
+                                        span.red Забыли пароль?
+                                .head-mob-login-fifth
+                                    span Впервые на сайте?
+                                    button
+                                        span Регистрация
+                            form.head-mob-reg-form
+                                h3 Регистрация
+                                input(type='text' placeholder='Фамилия *')
+                                input(type='text' placeholder='Имя *')
+                                input(type='text' placeholder='Отчество')
+                                input(type='email' placeholder='E-mail (Логин)')
+                                input(type='tel' placeholder='Номер телефона')
+                                input(type='text' placeholder='Пароль *')
+                                input(type='text' placeholder='Подтверждение пароля *')
+                                button
+                                    span Регистрация
+                                span Пароль должен быть не менее 6 символов длиной.
+                                span * Поля, обязательные для заполнения.
+                        .head-mob-user-logout
+                            button
+                                span Личный кабинет
+                            .head-mob-login-div
+                            button
+                                +img('logout.png')
+                        .head-mob-links
+                            input(type='checkbox' id='head-mob-links-checkbox' class='head-mob-links-checkbox' style='display:none')
+                            label(for='head-mob-links-checkbox').head-mob-links-list.head-mob-links-list-top
+                                span Ювелирные украшения
+                                +img('arrow-black.png')
+                            ul.head-mob-links-ul
                                 li
-                                    a(href='#') Как оформить заказ
+                                    a(href='#') Браслеты
                                 li
-                                    a(href='#') Доставка и оплата
+                                    a(href='#') Брелки
                                 li
-                                    a(href='#') Гарантия, обмен, возврат
+                                    a(href='#') Броши
                                 li
-                                    a(href='#') Программа лояльности
-                        li
-                            a(href='#') Розничные магазины
-                        li
-                            a(href='#') Контакты
-            .head-address
-                a(href='#')
-                    +img()
-                    span.head-span-cont
-                        span Магазины
-                        br
-                        span Москва
-            .head-logo
-                a(href='#')
-                    +img('logo.png')
-            .head-choosen.head-mob-cc
-                a(href='#')
-                    +img('choosen.png')
-                    .head-mob-cont.head-mob-choosen
-                        span 7
-                    span.head-choosen-cont.head-cont
-                        span Избранное
-                        br
-                        span Товаров (#[span.head-choosen-products 0])
-            .head-cart.head-mob-cc
-                a(href='#')
-                    +img('cart.png')
-                    .head-mob-cont.head-mob-cart
-                        span 3
-                    span.head-cart-cont.head-cont
-                        span Моя корзина
-                        br
-                        span Ваша корзина пуста
+                                    a(href='#') Булавка
+                                li
+                                    a(href='#') Зажимы для денег
+                                li
+                                    a(href='#') Зажимы для галстука
+                                li
+                                    a(href='#') Запонки
+                                li
+                                    a(href='#') Колье
+                                li
+                                    a(href='#') Кольца
+                                li
+                                    a(href='#') Комплекты
+                                li
+                                    a(href='#') Подвески
+                                li
+                                    a(href='#') Серьги
+                                li
+                                    a(href='#') Цепь
+                                li
+                                    a(href='#') Обручальные кольца
+                            ul.head-mob-links-ul-visible
+                                li
+                                    a(href='#') Для женщин
+                                li
+                                    a(href='#') Для мужчин
+                                li
+                                    a(href='#') Наручные часы
+                                li
+                                    a(href='#') Коллекции
+                                li
+                                    a(href='#') Столовое серебро
+                                li
+                                    a(href='#') Сувениры
+                                li
+                                    a(href='#') SALE
+                                li
+                                    a(href='#').red Акции
+                            ul.head-mob-links-main
+                                li
+                                    a(href='#') О компании
+                                li
+                                    a(href='#') Новости
+                                li
+                                    input(type='checkbox' id='head-mob-links-checkbox-sub' class='head-mob-links-checkbox-sub' style='display:none')
+                                    label(for='head-mob-links-checkbox-sub').head-mob-links-list.head-mob-links-list-bottom
+                                        span Как купить
+                                        +img('arrow-black.png')
+                                    ul.head-mob-links-slave
+                                        li
+                                            a(href='#') Как оформить заказ
+                                        li
+                                            a(href='#') Доставка и оплата
+                                        li
+                                            a(href='#') Гарантия, обмен, возврат
+                                        li
+                                            a(href='#') Программа лояльности
+                                li
+                                    a(href='#') Контакты
+                                li
+                                    a(href='#')
+                                        span Розничные магазины
+                                        +img('map-icon.png')
+                        .head-mob-soc
+                            ul
+                                li
+                                    a(href='#')
+                                        +img('head-icon-youtube.png')
+                                li
+                                    a(href='#')
+                                        +img('head-icon-face.png')
+                                li
+                                    a(href='#')
+                                        +img('head-icon-vk.png')
+                                li
+                                    a(href='#')
+                                        +img('head-icon-insta.png')
+                .head-address
+                    a(href='#')
+                        +img()
+                        span.head-span-cont
+                            span Магазины
+                            br
+                            span Москва
+                .head-logo
+                    a(href='#')
+                        +img('logo.png')
+                .head-choosen.head-mob-cc
+                    a(href='#')
+                        +img('choosen.png')
+                        .head-mob-cont.head-mob-choosen
+                            span 7
+                        span.head-choosen-cont.head-cont
+                            span Избранное
+                            br
+                            span Товаров (#[span.head-choosen-products 0])
+                .head-cart.head-mob-cc
+                    a(href='#')
+                        +img('cart.png')
+                        .head-mob-cont.head-mob-cart
+                            span 3
+                        span.head-cart-cont.head-cont
+                            span Моя корзина
+                            br
+                            span Ваша корзина пуста

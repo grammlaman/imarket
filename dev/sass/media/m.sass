@@ -2,8 +2,12 @@ $unit : 'px'
 .section
   +w($mobile#{$unit})
   margin: 0 auto
+.set
+  overflow: visible
+label
+  cursor: pointer
 .red
-  color: $red
+  color: $red!important
 .head
   &-red-line
     +wh(100%,4px)
@@ -15,8 +19,10 @@ $unit : 'px'
     &-row
       display: flex
       align-items: center
-      position: fixed
+      justify-content: space-between
+      position: relative
       box-shadow: 0 3px 3px rgba(0,0,0,0.2)
+      width: 100%
     &-but
       display: block
       padding: 17px 24px 17px 18px
@@ -40,6 +46,7 @@ $unit : 'px'
       z-index: 10
       background-color: $light-pink
       display: none
+      padding-bottom: 30px
     &-checkbox
       &:checked~.head-mob-menu,&:checked~.head-mob-but-close
         display: block
@@ -96,26 +103,154 @@ $unit : 'px'
     &-cc
       position: relative
     &-user
+      +w(260px)
       display: flex
-      label
+      flex-wrap: wrap
+      &>label
         background-color: $red
         display: flex
         align-items: center
         justify-content: center
         span
           +font(18px,$f_reg,#fff)
+      &-logout
+        display: none
+        align-items: center
+        button
+          +wh(198px,62px)
+          background-color: $red
+          display: flex
+          justify-content: center
+          align-items: center
+          span
+            +font(18px,$f_reg,#fff)
+          &:last-child
+            +w(61px)
     &-login
-      +wh(90px,62px)
-      border-right: 1px solid $light-gray
+      &-div
+        +wh(1px,62px)
+        background-color: $light-gray
+      &-form
+        +w(100%)
+        flex-direction: column
+        align-items: center
+        padding: 20px 0
+        display: none
+        span
+          +font(12px,$f_reg,#000)
+      &-input:checked~.head-mob-login-form
+        display: flex
+      &-button
+        +wh(89px,62px)
+      &-first,&-second,&-third
+        +w(85%)
+        padding: 10px
+        background-color: $light-pink
+        border: 1px solid $middle-gray
+        margin-bottom: 10px
+      &-first:hover,&-second:hover
+        border-color: $red
+      &-third
+        border-color: $red
+        margin-bottom: 15px
+      &-forth
+        margin-bottom: 5px
+        div
+          display: flex
+          align-items: center
+          input
+            margin-right: 5px
+      &-forth,&-fifth
+        +w(85%)
+        display: flex
+        justify-content: space-between
+        align-items: center
+      &-fifth
+        button
+          padding: 10px
+          background-color: $red
+          border: 1px solid $red
+          span
+            color: #fff
     &-reg
-      +wh(170px,62px)
+      &-button
+        +wh(170px,62px)
+      &-form
+        +w(260px)
+        display: none
+        flex-direction: column
+        align-items: center
+        padding: 20px 0
+        h3
+          +font(24px,$f_reg,#000)
+          margin-right: auto
+          margin-left: 20px
+        input,button
+          +font(12px,$f_reg,#000)
+          +w(85%)
+          padding: 10px
+          background-color: $light-pink
+          border: 1px solid $middle-gray
+          margin-top: 10px
+          &:hover
+            border-color: $red
+        button
+          border-color: $red
+        &>span
+          font-size: 12px
+          width: 85%
+          margin-top: 7px
+      &-input:checked~.head-mob-reg-form
+        display: flex
+    &-links
+      +font(18px,$f_reg,#000)
+      padding: 30px 0
+      &-list
+        display: flex
+        align-items: center
+        span
+          margin-right: 7px
+        img
+          transition: .35s ease
+      li
+        margin-top: 10px
+      &-ul,&-main,&>.head-mob-links-list,&-ul-visible
+        padding-left: 20px
+      a
+        color: #000
+      &-ul,&-slave
+        display: none
+      &-main
+        margin-top: 10px
+        border-top: 1px solid $middle-gray
+        li:last-child
+          display: flex
+          align-items: center
+          span
+            margin-right: 7px
+      &-checkbox
+        &:checked~.head-mob-links-ul
+          display: block
+        &:checked~.head-mob-links-list-top
+          img
+            transform: rotate(180deg)
+            transition: .35s ease
+        &-sub:checked~.head-mob-links-slave
+          display: block
+        &-sub:checked~.head-mob-links-list-bottom img
+          transform: rotate(180deg)
+          transition: .35s ease
+    &-soc
+      ul
+        display: flex
+        justify-content: space-evenly
   &-address
     display: none
   &-logo
     width: 136px
   &-choosen
-    margin-left: 25px
+    margin-right: 12px
   &-cart
-    margin-left: 12px
+    margin-right: 16px
   &-cont
     display: none
