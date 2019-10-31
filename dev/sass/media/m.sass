@@ -41,6 +41,7 @@ label
       padding: 15px 19px 16px
       background-color: #fff
     &-menu
+      +w(81.25%)
       position: absolute
       top: -4px
       z-index: 10
@@ -55,17 +56,22 @@ label
       align-items: center
       border-bottom: 1px solid $light-gray
     &-phone
+      +w(76%)
       a
-        padding: 19px
+        padding: 18px 0
         display: flex
+        justify-content: center
         align-items: center
         span
           +font(18px,$f_semi,#000)
           margin-left: 10px
     &-search
+      +w(24%)
       label
-        padding: 24px 24px 20px 21px
-        display: block
+        padding: 23px 0 24px
+        display: flex
+        align-items: center
+        justify-content: center
         border-left: 1px solid $light-gray
       &-window
         +wh(198px,62px)
@@ -103,10 +109,9 @@ label
     &-cc
       position: relative
     &-user
-      +w(260px)
       display: flex
       flex-wrap: wrap
-      &>label
+      &>button
         background-color: $red
         display: flex
         align-items: center
@@ -117,7 +122,7 @@ label
         display: none
         align-items: center
         button
-          +wh(198px,62px)
+          +wh(76%,62px)
           background-color: $red
           display: flex
           justify-content: center
@@ -125,83 +130,16 @@ label
           span
             +font(18px,$f_reg,#fff)
           &:last-child
-            +w(61px)
+            +w(23.5%)
     &-login
       &-div
         +wh(1px,62px)
         background-color: $light-gray
-      &-form
-        +w(100%)
-        flex-direction: column
-        align-items: center
-        padding: 20px 0
-        display: none
-        span
-          +font(12px,$f_reg,#000)
-      &-input:checked~.head-mob-login-form
-        display: flex
       &-button
-        +wh(89px,62px)
-      &-first,&-second,&-third
-        +w(85%)
-        padding: 10px
-        background-color: $light-pink
-        border: 1px solid $middle-gray
-        margin-bottom: 10px
-      &-first:hover,&-second:hover
-        border-color: $red
-      &-third
-        border-color: $red
-        margin-bottom: 15px
-      &-forth
-        margin-bottom: 5px
-        div
-          display: flex
-          align-items: center
-          input
-            margin-right: 5px
-      &-forth,&-fifth
-        +w(85%)
-        display: flex
-        justify-content: space-between
-        align-items: center
-      &-fifth
-        button
-          padding: 10px
-          background-color: $red
-          border: 1px solid $red
-          span
-            color: #fff
+        +wh(34%,62px)
     &-reg
       &-button
-        +wh(170px,62px)
-      &-form
-        +w(260px)
-        display: none
-        flex-direction: column
-        align-items: center
-        padding: 20px 0
-        h3
-          +font(24px,$f_reg,#000)
-          margin-right: auto
-          margin-left: 20px
-        input,button
-          +font(12px,$f_reg,#000)
-          +w(85%)
-          padding: 10px
-          background-color: $light-pink
-          border: 1px solid $middle-gray
-          margin-top: 10px
-          &:hover
-            border-color: $red
-        button
-          border-color: $red
-        &>span
-          font-size: 12px
-          width: 85%
-          margin-top: 7px
-      &-input:checked~.head-mob-reg-form
-        display: flex
+        +wh(65.5%,62px)
     &-links
       +font(18px,$f_reg,#000)
       padding: 30px 0
@@ -248,6 +186,8 @@ label
     display: none
   &-logo
     width: 136px
+    a
+      display: block
   &-choosen
     margin-right: 12px
   &-cart

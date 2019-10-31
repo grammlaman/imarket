@@ -2,36 +2,34 @@ header
     .row.head-red-line
     .row.head-top-bgc
         .section
-            nav.head-top-nav
-                ul.head-top-links-main
-                    li
-                        a(href='#').head-top-link О компании
-                    li
-                        a(href='#').head-top-link Новости
-                    li
-                        a(href='#').head-top-link Как купить
-                        ul.head-top-links-slave
-                            li
-                                a(href='#') Как оформить заказ
-                            li
-                                a(href='#') Доставка и оплата
-                            li
-                                a(href='#') Гарантия, обмен, возврат
-                            li
-                                a(href='#') Программа лояльности
-                    li
-                        a(href='#').head-top-link Розничные магазины
-                    li
-                        a(href='#').head-top-link Контакты
-            .head-phone
-                a(href='tel:88003755555').head-phone-call
-                    +img()
-                    span 8 800 375 55 55
-                a(href='#').head-phone-add-call Заказать звонок
-            .login
-                button Вход
-                div
-                button Регистрация
+            .head-top
+                nav.head-top-nav
+                    a(href='#').head-top-nav-link О компании
+                    a(href='#').head-top-nav-link Новости
+                    input(type='checkbox' id='head-top-howtobuy' class='head-top-howtobuy' style='display:none')
+                    label(for='head-top-howtobuy').head-top-nav-link
+                        span Как купить
+                        +img('arrow-black.png')
+                    ul.head-top-nav-sub
+                        li
+                            a(href='#') Как оформить заказ
+                        li
+                            a(href='#') Доставка и оплата
+                        li
+                            a(href='#') Гарантия, обмен, возврат
+                        li
+                            a(href='#') Программа лояльности
+                    a(href='#').head-top-nav-link Розничные магазины
+                    a(href='#').head-top-nav-link Контакты
+                .head-phone
+                    a(href='tel:88003755555').head-phone-call
+                        +img('head-tel.png')
+                        span 8 800 375 55 55
+                    a(href='#').head-phone-add-call Заказать звонок
+                .head-login
+                    button Вход
+                    div
+                    button Регистрация
     .row
         .section
             .head-mob-row
@@ -56,42 +54,11 @@ header
                                 .head-mob-search-window
                                     input(type='text' placeholder='Введите название товара')
                         .head-mob-user
-                            input(type='checkbox' id='head-mob-login' class='head-mob-login-input' style='display:none')
-                            input(type='checkbox' id='head-mob-reg' class='head-mob-reg-input' style='display:none')
-                            label(for='head-mob-login').head-mob-login-button
+                            button.head-mob-login-button
                                 span Вход
                             .head-mob-login-div
-                            label(for='head-mob-reg').head-mob-reg-button
+                            button.head-mob-reg-button
                                 span Регистрация
-                            form.head-mob-login-form
-                                input(type='text' placeholder='Логин:').head-mob-login-first
-                                input(type='text' placeholder='Пароль:').head-mob-login-second
-                                button.head-mob-login-third
-                                    span Войти
-                                .head-mob-login-forth
-                                    div
-                                        input(type='checkbox' id='head-mob-login-checkbox')
-                                        label(for='head-mob-login-checkbox')
-                                            span Запомнить
-                                    button.red
-                                        span.red Забыли пароль?
-                                .head-mob-login-fifth
-                                    span Впервые на сайте?
-                                    button
-                                        span Регистрация
-                            form.head-mob-reg-form
-                                h3 Регистрация
-                                input(type='text' placeholder='Фамилия *')
-                                input(type='text' placeholder='Имя *')
-                                input(type='text' placeholder='Отчество')
-                                input(type='email' placeholder='E-mail (Логин)')
-                                input(type='tel' placeholder='Номер телефона')
-                                input(type='text' placeholder='Пароль *')
-                                input(type='text' placeholder='Подтверждение пароля *')
-                                button
-                                    span Регистрация
-                                span Пароль должен быть не менее 6 символов длиной.
-                                span * Поля, обязательные для заполнения.
                         .head-mob-user-logout
                             button
                                 span Личный кабинет

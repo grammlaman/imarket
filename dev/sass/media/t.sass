@@ -1,2 +1,90 @@
 .section
   +w($tablet#{$unit})
+.head
+  &-mob
+    &-nav
+      display: none
+  &-red-line
+    height: 8px
+  &-top
+    +w(100%)
+    background-color: $middle-pink
+    padding: 3px 15px
+    display: flex
+    align-items: center
+    &-bgc
+      display: block
+    &-nav
+      +w(264px)
+      display: flex
+      justify-content: space-between
+      margin-right: auto
+      a,label
+        +font(13px,$f_reg,#000)
+      &>a:nth-child(6),&>a:last-child
+        display: none
+      label
+        display: flex
+        align-items: center
+        span
+          margin-right: 7px
+      &-sub
+        position: absolute
+        top: 60px
+        left: 110px
+        z-index: 20
+        display: none
+        li a
+          +w(300px)
+          display: block
+          padding: 10px 20px
+          background-color: #fff
+    &-howtobuy:checked~.head-top-nav-sub
+      display: block
+  &-phone
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-right: 60px
+    &-call
+      display: flex
+      justify-content: center
+      align-items: center
+      span
+        +font(18px,$f_reg,#000)
+        margin-left: 10px
+    &-add-call
+      +font(13px,$f_reg,$dark-red)
+  &-login
+    display: flex
+    align-items: center
+    div
+      +wh(2px,15px)
+      margin: 0 10px
+      background-color: $middle-gray
+    button
+      +font(13px,$f_reg,#000)
+  &-logo
+    +w(225px)
+    margin-right: auto
+  &-mob
+    &-row
+      padding: 18px 15px 14px
+      box-shadow: none
+    &-cont
+      display: none
+  &-cont
+    display: block
+  &-choosen,&-cart
+    margin: 0
+    a
+      display: flex
+      align-items: center
+    &-cont
+      margin-left: 8px
+      span:first-child
+        +font(14px,$f_reg,#000)
+      span:last-child
+        +font(13px,$f_reg,$text-gray)
+  &-choosen
+    margin-right: 60px
