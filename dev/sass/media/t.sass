@@ -4,6 +4,14 @@
   &-mob
     &-nav
       display: none
+      margin-right: auto
+    &-search-window
+      +w(450px)
+    &-reg-button
+      +w(65.75%)
+    &-but-close
+      padding: 15px 8.5% 16px
+      box-shadow: 0 10px 10px rgba(0,0,0,0.3)
   &-red-line
     height: 8px
   &-top
@@ -18,7 +26,8 @@
       display: flex
       align-items: center
       margin-right: auto
-      a,label
+      position: relative
+      &>a,label
         +font(13px,$f_reg,#000)
         margin-right: 20px
       &>a:nth-child(6),&>a:last-child
@@ -30,8 +39,8 @@
           margin-right: 7px
       &-sub
         position: absolute
-        top: 56px
-        left: 200px
+        top: 32px
+        left: 170px
         z-index: 20
         box-shadow: 0 10px 20px rgba(0,0,0,0.3)
         display: none
